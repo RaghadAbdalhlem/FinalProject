@@ -1,0 +1,608 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+  z-index: 10;
+  transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.logo-image {
+  height: 55px;
+  width: auto;
+}
+
+.nav-item-responsive {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #000 !important;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f39c12 !important;
+  /* Golden hover effect */
+}
+
+/* Active Link */
+.active-link {
+  color: #f39c12 !important;
+  font-weight: bold;
+  border-bottom: 2px solid #f39c12;
+}
+
+/* Logout Button */
+.logout-button {
+  background: #e74c3c;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+  background: #c0392b;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+  }
+
+  .logout-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* General Auth Wrapper */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff, #dce7ff);
+}
+
+
+/* Auth Inner Container */
+.auth-inner {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Card Styling */
+.auth-inner .card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background: white;
+}
+
+/* Card Body */
+.auth-inner .card-body {
+  padding: 2rem;
+}
+
+/* Logo */
+.auth-inner .logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Form Control Focus */
+.form-control:focus,
+.form-control:active {
+  border: 1px solid #0e2106;
+  box-shadow: none !important;
+}
+
+/* Labels */
+.auth-inner label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Submit Button */
+.auth-inner .btn {
+  background: #2a22ad;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+/* Submit Button Hover */
+.auth-inner .btn:hover {
+  background: #ff517a;
+  box-shadow: 0px 5px 15px rgba(255, 81, 122, 0.3);
+}
+
+/* Text Center */
+.text-center {
+  text-align: center;
+}
+
+/* Links */
+.auth-inner a {
+  text-decoration: none;
+  color: #ff758c;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Link Hover */
+.auth-inner a:hover {
+  color: #ff517a;
+}
+
+/* Error Messages */
+.text-danger {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-inner {
+    max-width: 90%;
+  }
+}
+
+.main-view {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 20px;
+}
+
+.equal-height {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.welcome-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.sub-text {
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #34495e;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* AI Recommendations */
+.ai-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recommendation-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.recommendation-list li {
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Water Widget */
+.water-card {
+  background: #e3f2fd;
+  border-radius: 12px;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.water-card p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+/* Motivational Message */
+.motivational-card {
+  background: #f5eef8;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.motivation-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #8e44ad;
+}
+
+/* Shortcut Buttons */
+.dashboard-btn {
+  width: 100%;
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.dashboard-btn:hover {
+  background: linear-gradient(to right, #2980b9, #1f6690);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  border-radius: 15px;
+  /* Rounded corners for card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for 3D effect */
+  border: none;
+  /* Remove default border */
+  overflow: hidden;
+  /* Ensure child elements don’t spill out */
+}
+
+.card-header {
+  background-color: #007bff;
+  /* Card header with a blue background */
+  color: #ffffff;
+  /* White text color */
+  text-align: center;
+  /* Center align the text */
+  font-size: 1.5rem;
+  /* Slightly larger font for the header */
+  font-weight: bold;
+  /* Bold text */
+  padding: 10px 0;
+  /* Padding for header */
+  border-radius: 10px 10px 0 0;
+  /* Rounded top corners */
+}
+
+.card-body {
+  background-color: #ffffff;
+  /* White background for the card body */
+  border-radius: 10px;
+  /* Rounded corners for the body */
+  padding: 20px;
+  /* Padding inside the body */
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar .search-input {
+  padding-left: 40px;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #007bff;
+  /* Customize icon color */
+}
+
+.recipe-card {
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.recipe-macros {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.macro-item {
+  margin-right: 15px;
+  font-size: 0.9rem;
+}
+
+.filter-input {
+  width: 100%;
+}
+
+.recipe-card img {
+  border-radius: 8px;
+}
+
+/* RecipeDetails.css */
+.recipe-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card-header {
+  padding: 20px;
+  background-color: #007bff;
+  text-align: center;
+}
+
+.recipe-card-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.recipe-info {
+  padding: 20px;
+  color: #333;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.ingredient-list,
+.instruction-list {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.ingredient-list li,
+.instruction-list li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.nutritional-info {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.nutritional-info p {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.recipe-image {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.music-select {
+  margin-bottom: 20px;
+}
+
+.save-btn {
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  background-color: #28a745;
+  border-color: #28a745;
+  width: 100%;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+@media (max-width: 768px) {
+  .recipe-card-header h2 {
+      font-size: 2rem;
+  }
+
+  .recipe-info {
+      padding: 15px;
+  }
+}
+.dropdown-item {
+  padding: 0.05rem 1.0rem;
+  clear: both;
+  text-align: inherit;
+  background-color: initial;
+  border: 0;
+}
+
+.dropdown-menu .dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.2rem;
+  clear: both;
+  font-weight: 400;
+  color: #6e6b7b;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-item:active,
+.dropdown-item:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0d6efd;
+}
+
+/* Notification Wrapper */
+.notification-wrapper {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* 🔔 Notification Bell Button */
+.notification-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.notification-btn:hover {
+  transform: scale(1.1);
+}
+
+.notification-badge {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 2px;
+}
+
+/* 💧 Water Reminder Notification Text */
+.notification-text {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* No notification text */
+.no-notification {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+}
+
+/* Dismiss Button */
+.dismiss-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 10px;
+  transition: background 0.2s ease-in-out;
+}
+
+.dismiss-btn:hover {
+  background: #cc0000;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .notification-text {
+      font-size: 12px;
+      padding: 8px;
+  }
+  .dismiss-btn {
+      font-size: 11px;
+      padding: 4px 8px;
+  }
+}
+
+.notification-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+/* 📝 Record Water Intake Button */
+.record-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.record-btn:hover {
+  background: #0056b3;
+}
